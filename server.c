@@ -1,4 +1,3 @@
-
 /* server.c ― HTTPS 버전 (포트 8443)
  * 2025-05-09
  */
@@ -45,7 +44,7 @@ static void handle_client_tls(SSL *ssl, struct sockaddr_in *caddr)
      *          SSL_write()로 교체해야 완전한 TLS 응답이 됨.
      */
     int fd = SSL_get_fd(ssl);   /* 원시 소켓 FD (임시호환) */
-    handle_request_path(fd, buf);
+    handle_request_path(ssl, buf);
 }
 /* ---------------------------------------------------------- */
 
@@ -109,4 +108,3 @@ int main(void)
     close(sfd);
     return 0;
 }
-
