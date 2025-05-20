@@ -4,7 +4,7 @@ LDFLAGS := -lssl -lcrypto   # HTTPS 서버를 유지하려면 이 라인 그대�
 # 만약 HTTP 서버만 쓰실 거면, '-lssl -lcrypto' 제거
 
 # 서버용 소스
-SRCS_SRV := ssl_init.c server.c path_response.c
+SRCS_SRV := ssl_init.c server.c path_response.c logger.c
 OBJS_SRV := $(SRCS_SRV:.c=.o)
 
 # 클라이언트용 소스 (평문 HTTP)
