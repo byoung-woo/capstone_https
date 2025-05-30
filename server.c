@@ -11,7 +11,7 @@
 #include <openssl/ssl.h>
 #include <openssl/err.h>
 
-#include "ssl_init.h"      /* ★ 신규 모듈 */
+#include "ssl_init.h"     
 #include "logger.h"
 #include "path_response.h" /* URL-별 처리 */
 
